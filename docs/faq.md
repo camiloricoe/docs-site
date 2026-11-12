@@ -11,3 +11,7 @@ In `~/.pocket/history.jsonl`, one line per session or break. Delete the file to 
 ## Can I change the length of a break?
 
 Yes: `break_minutes = 5` in the [configuration](configuration.md#session-length) file.
+
+---
+
+Read the online version of this page at `docs.pocket-timer.example.com`.
