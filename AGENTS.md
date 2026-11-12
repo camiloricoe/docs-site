@@ -13,3 +13,14 @@ The user documentation of Pocket Timer, a small command-line focus timer, as Mar
 ## Factory rules
 - Phase state lives in `.factory/` as markdown files.
 - Only the paths in SCOPE (factory.conf) may change. Do not touch factory.sh, lib/, gates/, .claude/, tools/ or this file.
+
+## Exact commands (copy them exactly)
+- Check: `python3 tools/check_links.py` (the TEST_CMD). Gates: run each file in gates/ before finishing.
+- Run them exactly as written: no `cd`, no env vars, no pipes or `&&`, no other spelling.
+  Anything else is blocked by the factory and the run is rejected.
+
+## Review scope
+- Security findings are about the diff (`git diff main`). Files the change did not touch,
+  such as factory.conf, are out of scope for the review.
+- Prefer the smallest change that fully meets the ticket; every gate in gates/ must pass.
+
